@@ -2,12 +2,12 @@
 from tkinter import *
 
 def annuitet(s,i,n):
-  return int( s*(i / (100*12)) /(1 - (1+i / (100*12)) ** (-n)))
+    return int( s*(i / (10012)) /(1 - (1+i / (10012)) ** (-n)))
 
 def credit():
-  result = annuitet(int(e1.get())-int(e3.get()),int(e4.get()),int(e2.get()))
-  e5.insert(0, result)
-
+    result = annuitet(int(e1.get())-int(e3.get()),int(e4.get()),int(e2.get()))
+    e5.delete("0", END)
+    e5.insert(0, result)
 root = Tk()
 root.title("Ипотека")
 root.geometry("250x250")
